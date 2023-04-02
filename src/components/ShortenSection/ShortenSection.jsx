@@ -26,7 +26,7 @@ const ShortenSection = () => {
   const copyLink = (shortink, index) => {
     navigator.clipboard.writeText(shortink);
     setCopied(index);
-    // setTimeout(setCopied(-1), 2000);
+    setTimeout(() => setCopied(-1), 3000);
   };
 
   const baseUrl = "https://api.shrtco.de/v2/shorten?url=";
@@ -99,7 +99,6 @@ const ShortenSection = () => {
         <LinkContainer
           link={link}
           copied={copied}
-          setCopied={setCopied}
           copyLink={copyLink}
           index={i}
           key={link.short}

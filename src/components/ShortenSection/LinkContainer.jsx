@@ -1,4 +1,4 @@
-const LinkContainer = ({ link, copied, setCopied, index, copyLink }) => {
+const LinkContainer = ({ link, copied, index, copyLink }) => {
   return (
     <div className="link-container">
       <p className="original-link">{link.original}</p>
@@ -7,7 +7,6 @@ const LinkContainer = ({ link, copied, setCopied, index, copyLink }) => {
         <button
           className="btn btn-copy"
           onClick={() => copyLink(link.short, index)}
-          onBlur={() => setCopied(-1)}
           style={{
             backgroundColor: copied == index && "var(--clr-primary-500)",
           }}
