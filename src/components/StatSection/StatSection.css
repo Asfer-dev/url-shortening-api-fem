@@ -1,0 +1,32 @@
+.stat-section {
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.feature-image {
+    background-color: var(--clr-primary-500);
+    width: 100px;
+    padding: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+}
+
+@media (max-width: 50em) {
+    .features-container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}

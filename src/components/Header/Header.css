@@ -1,0 +1,100 @@
+
+header {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-bold);
+    transition: color 0.2s ease-out;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--clr-neutral-900);
+}
+
+/* Buttons */
+
+header .btn {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: var(--clr-neutral-400) !important;
+    font-weight: var(--fw-bold);
+}
+.btn-login:hover,
+.btn-login:focus {
+    color: var(--clr-neutral-900) !important;
+}
+
+.btn-signup {
+    background-color: var(--clr-primary-400);
+    font-weight: var(--fw-normal);
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+}
+.btn-signup:hover,
+.btn-signup:focus {
+    background-color: var(--clr-primary-300);
+}
+
+.ms-auto {
+    margin-left: auto;
+}
+
+@media (max-width: 50em) {
+    .nav-links {
+        background-color: var(--clr-primary-500);
+        position: absolute;
+        flex-direction: column;
+        padding: 3rem 4rem;
+        top: 6rem;
+        left: 2rem;
+        right: 2rem;
+        border-radius: 0.6rem;
+    }
+
+    .nav-links a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: var(--fw-normal);
+    }
+    .nav-links a:hover,
+    .nav-links a:focus {
+        color: var(--clr-neutral-400)
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+}
+@media (min-width: 50em) {
+    .mobile-nav-toggle {
+        display: none;
+    }
+}
